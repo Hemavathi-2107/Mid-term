@@ -16,6 +16,8 @@ Clone the repository:
 
 git clone https://github.com/Hemavathi-2107/Mid-term.git
 
+Code Coverage : 96%
+
 Navigate to the project directory:
 
 cd Mid-term
@@ -142,56 +144,4 @@ pylint – Linting ensures that the code adheres to Python's coding standards.
 
 cov – Provides test coverage statistics, highlighting untested code paths.
 
-EAFP & LBYL
-
-LBYL (Look Before You Leap)
-This approach is used to validate conditions before attempting operations. It prevents unnecessary errors by checking prerequisites first.
-
-Code example:
-
-if 'divide' in self.command_handler.commands:
-
-    if isinstance(operand2, (int, float)) and operand2 != 0:
-    
-        result = operand1 / operand2
-        
-        print(f"Result: {result}")
-        
-    else:
-    
-        print("Invalid operation: Division by zero or invalid operand type.")
-
-        
-else:
-
-    print("Command not found.")
-    
-    
-In this example, the code checks whether the divide command exists and validates that the second operand is a valid non-zero number before executing the division.
-
-EAFP (Easier to Ask for Forgiveness than Permission)
-
-This approach attempts execution directly and handles any resulting exceptions. It is preferred in Python due to its simplicity and performance.
-
-Code example:
-
-
-try:
-
-    result = operand1 / operand2
-    
-    print(f"Result: {result}")
-
-except ZeroDivisionError:
-
-    print("Cannot divide by zero.")
-    
-except TypeError:
-
-    print("Operands must be numbers.")
-    
-    
-In this example, the code directly attempts to divide the operands and handles any exceptions (like division by zero or type errors) that might occur.
-
 Presentation Link:
-https://drive.google.com/file/d/1iQ8DwK56Ux43_Mt2bcxjVTvUiXBujV8J/view?usp=share_link
